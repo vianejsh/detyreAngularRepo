@@ -1,0 +1,21 @@
+<h3>Update Camera</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="camera.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Resolution</label>
+      <input type="text" class="form-control" id="resolution" [(ngModel)]="camera.resolution" required pattern="(\d+)x(\d+)" name="resolution">
+    </div>
+
+    <div class="form-group">
+      <label for="name">IP</label>
+      <input type="text" class="form-control" id="ip"  [(ngModel)]="camera.ip" required name="ip">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

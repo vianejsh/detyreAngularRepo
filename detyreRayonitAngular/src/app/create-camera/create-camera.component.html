@@ -1,0 +1,22 @@
+<h3>Create Camera</h3>
+<div style="width: 400px;">
+  <form ngNativeValidate (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input class="form-control" id="name"  required minlength="4" [(ngModel)]="camera.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Resolution</label>
+      <input class="form-control" id="resolution" required [(ngModel)]="camera.resolution" [pattern] = "resPattern"name="resolution">
+
+    </div>
+
+    <div class="form-group">
+      <label for="name">IP</label>
+      <input type="text" class="form-control" id="ip" required [(ngModel)]="camera.ip" [pattern] = "ipPattern" name="ip">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
